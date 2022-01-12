@@ -30,15 +30,17 @@ router.get(`/`, async(req, res) => {
 })
 
 //# Destroy Route
-router.delete(`/id`, async (req, res) => {
+router.delete(`/:id`, async (req, res) => {
   const { id } = req.params;
-  await VidPlaylist.findByIdAndDelete(req.params.id);
-  res.json({message: `Playlist with id matching ${id} deleted`})
+  await ScopeItem.findByIdAndDelete(id);
+  res.json({message: `ScopeItem with id matching ${id} deleted`})
 })
 
 //# Update Route
-router.put(`/:id`, (req, res) => {
-  res.render(``, {  })
+router.put(`/:id`, async (req, res) => {
+   const scopeItem = await ScopeItem.findByIdAndUpdate(req.params.id,
+   req.body, { new: true });
+   res.json(scopeItem)
   
 })
 
@@ -51,7 +53,10 @@ router.post(`/`, async (req, res) => {
 
 
 //# Show Route
-
+router.get(`/:id`, async (req, res) => {
+  const scopeItems = await ScopeItem.findById(req.params.id);
+  res.json(scopeItems);
+});
 
 /*----------------------------------
    Export Router
