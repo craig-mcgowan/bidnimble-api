@@ -17,15 +17,12 @@ const SI_Router = require("../controllers/scopeItem");
    Middleware
 ----------------------------------*/
 // app.use(NODE_ENV === "production" ? cors(corsOptions) : cors());
-app.use(cors())
-app.options("*", cors())
-app.use(morgan("tiny"));
-app.use(express.json());
-app.use(express.static("public"));
+
 
 const middleware = (app) => {
-  //use public folder for static assets
-  app.use(express.static("public"));
+   //use public folder for static assets
+   app.use(express.static("public"));
+  app.use(cors())
   app.use(express.json()); // returns middleware that only parses JSON
 
   app.use(morgan("tiny"));
