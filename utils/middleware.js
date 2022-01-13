@@ -18,6 +18,7 @@ const SI_Router = require("../controllers/scopeItem");
 ----------------------------------*/
 // app.use(NODE_ENV === "production" ? cors(corsOptions) : cors());
 app.use(cors())
+app.options("*", cors())
 app.use(morgan("tiny"));
 app.use(express.json());
 app.use(express.static("public"));
