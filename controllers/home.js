@@ -2,7 +2,7 @@
    Dependencies
 ----------------------------------*/
 
-const scopeItem = require("../models/scopeItem");
+const scopeItem = require("../models/trade");
 const { Router } = require("express");
 const router = Router();
 

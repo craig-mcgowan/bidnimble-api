@@ -11,7 +11,7 @@ const cors = require("cors");
 const corsOptions = require("../config/cors");
 const { addListener } = require("nodemon");
 const HomeRouter = require("../controllers/home");
-const SI_Router = require("../controllers/scopeItem");
+const Trade_Router = require("../controllers/trade");
 
 /*----------------------------------
    Middleware
@@ -27,7 +27,7 @@ const middleware = (app) => {
 
   app.use(morgan("tiny"));
   //# routers
-  app.use("/si", SI_Router)
+  app.use("/trade", Trade_Router)
   app.use("/", HomeRouter)
 }
 

@@ -2,7 +2,7 @@
    Dependencies
 ----------------------------------*/
 
-const ScopeItem = require("../models/scopeItem")
+const Trade = require("../models/trade")
 const { Router } = require("express")
 const router = Router()
 
@@ -25,37 +25,37 @@ module.exports = router
 
 //# Index Route
 router.get(`/`, async(req, res) => {
-  const scopeItems = await ScopeItem.find();
-  res.json(scopeItems)
+  const trades = await Trade.find();
+  res.json(trades)
 })
 
 //# Destroy Route
 router.delete(`/:id`, async (req, res) => {
   const { id } = req.params;
-  await ScopeItem.findByIdAndDelete(id);
-  res.json({message: `ScopeItem with id matching ${id} deleted`})
+  await Trade.findByIdAndDelete(id);
+  res.json({message: `Trade with id matching ${id} deleted`})
 })
 
 //# Update Route
 router.put(`/:id`, async (req, res) => {
-   const scopeItem = await ScopeItem.findByIdAndUpdate(req.params.id,
+   const trade = await Trade.findByIdAndUpdate(req.params.id,
    req.body, { new: true });
-   res.json(scopeItem)
+   res.json(trade)
   
 })
 
 //# Create Route
 router.post(`/`, async (req, res) => {
-  const scopeItem = await ScopeItem.create(req.body) 
-  res.json(scopeItem)
+  const trade = await Trade.create(req.body) 
+  res.json(trade)
   
 })
 
 
 //# Show Route
 router.get(`/:id`, async (req, res) => {
-  const scopeItems = await ScopeItem.findById(req.params.id);
-  res.json(scopeItems);
+  const trade = await Trade.findById(req.params.id);
+  res.json(trade);
 });
 
 /*----------------------------------
