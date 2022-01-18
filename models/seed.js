@@ -41,7 +41,7 @@ mongoose.connection.on("open", () => {
   ]
   
   tradesArr.forEach(trade => {
-    trade.laborRate = Math.floor(Math.random() * (150 - 60) + 60)
+    trade.laborRate = Math.floor(Math.random() * (150 - 60) + 60).toString()
     trade.userId = 1
     if (trade.scopeSections.length === 0) {
       trade.scopeSections.push({name: trade.name, scopeItems: []})
@@ -52,7 +52,7 @@ mongoose.connection.on("open", () => {
           {
             item: "Day Rate", 
             unit: "DAYS",
-            rate: trade.laborRate*8,
+            rate: (trade.laborRate*8).toString(),
           }
           )
     }

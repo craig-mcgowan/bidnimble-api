@@ -4,7 +4,7 @@ const itemSchema = new Schema(
   {
     item: { type: String, required: true },
     unit: { type: String, required: true },
-    rate: { type: Number, required: true },
+    rate: { type: String, required: true },
   },
   { timestamps: true }
 );
@@ -20,7 +20,7 @@ const tradeSchema = new Schema(
     name: { type: String, required: true },
     scopeSections: [scopeSectionSchema], 
     userId: { type: Number, required: true },
-    laborRate: { type: Number},
+    laborRate: { type: String},
   },
   { timestamps: true }
 );
