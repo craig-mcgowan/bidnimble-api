@@ -2,7 +2,7 @@
    Dependencies
 ----------------------------------*/
 
-const Estimate = require("../models/trade")
+const Estimate = require("../models/estimate")
 const { Router } = require("express")
 const router = Router()
 
@@ -23,7 +23,7 @@ const router = Router()
 
 //# Index Route
 router.get(`/`, async(req, res) => {
-  const estimates = await Trade.find();
+  const estimates = await Estimate.find();
   res.json(estimates)
 })
 

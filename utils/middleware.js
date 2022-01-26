@@ -13,7 +13,7 @@ const { addListener } = require("nodemon");
 const HomeRouter = require("../controllers/home");
 const Trade_Router = require("../controllers/trade");
 const Estimate_Router = require("../controllers/estimate")
-const verify = require("./verify");
+//const verify = require("./verify");
 
 /*----------------------------------
    Middleware

@@ -23,7 +23,7 @@ const estimateTradeSchema = new Schema(
   {
     name: { type: String, required: true },
     total: { type: String, required: true },
-    scopeSections: [scopeSectionSchema], 
+    scopeSections: [sectionSchema], 
   },
   { timestamps: true }
 );

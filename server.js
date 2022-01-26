@@ -3,7 +3,7 @@
 ----------------------------------*/
 const express = require("express")
 const middleware = require("./utils/middleware")
-const verify = require("./utils/verify")
+//const verify = require("./utils/verify")
 const {PORT} = process.env
 
 
