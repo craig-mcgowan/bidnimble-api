@@ -19,7 +19,7 @@ const tradeSchema = new Schema(
   {
     name: { type: String, required: true },
     scopeSections: [scopeSectionSchema], 
-    userId: { type: Number, required: true },
+    userId: { type: Number },
     laborRate: { type: String},
   },
   { timestamps: true }
