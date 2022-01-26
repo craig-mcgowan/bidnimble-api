@@ -30,9 +30,9 @@ const estimateTradeSchema = new Schema(
 
 const estimateSchema = new Schema(
   {
-    item: { type: String, required: true },
     userId: {type: Number},
-    name: {type: String, required: true},
+    name: { type: String, required: true },
+    location: {type: String},
     trades: [estimateTradeSchema],
     subtotal: { type: String, required: true },
     fees: [lineItemSchema],
