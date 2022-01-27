@@ -43,9 +43,8 @@ router.put(`/:id`, async (req, res) => {
 })
 
 //# Create Route
-router.post(`/`, async (req, res) => {
-  const estimate = await Estimate.create(req.body) 
-  res.json(estimate)
+router.post(`/`, (req, res) => {
+Estimate.create((err, estimate)=>res.json(estimate)) 
   
 })
 
