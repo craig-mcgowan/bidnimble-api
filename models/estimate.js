@@ -13,9 +13,9 @@ const lineItemSchema = new Schema(
 
 const sectionSchema = new Schema(
   {
-    name: { type: String, required: true },
-    scopeItems: [lineItemSchema],
-    total: {type: String, required: true}
+      name: { type: String, required: true },
+      scopeItems: [lineItemSchema],
+      total: {type: String, required: true}
   },
   { timestamps: true }
 );
@@ -23,7 +23,7 @@ const estimateTradeSchema = new Schema(
   {
     name: { type: String, required: true },
     total: { type: String, required: true },
-    scopeSections: [sectionSchema], 
+    estimateSections: [sectionSchema], 
   },
   { timestamps: true }
 );
