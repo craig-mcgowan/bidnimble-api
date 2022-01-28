@@ -14,7 +14,7 @@ const lineItemSchema = new Schema(
 const sectionSchema = new Schema(
   {
       name: { type: String, required: true },
-      scopeItems: [lineItemSchema],
+      lineItems: [lineItemSchema],
       total: {type: String, required: true}
   },
   { timestamps: true }
