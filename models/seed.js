@@ -9,7 +9,7 @@ const trade = require("./trade");
 /*----------------------------------
    Seed Code
 ----------------------------------*/
-
+//test this connection
 
 // Make sure code is not run till connected
 mongoose.connection.on("open", () => {
