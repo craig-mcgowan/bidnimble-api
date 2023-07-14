@@ -1,4 +1,4 @@
-/*----------------------------------
+/*---------------------------------
   Following along Svelte-GoogleOAuth Tutorial by Tom Wilson Hyper63
   https://blog.hyper63.com/svelte-google-oauth/
 ----------------------------------*/
